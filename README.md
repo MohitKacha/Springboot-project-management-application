@@ -1,6 +1,23 @@
-# Springboot-project-management-application
+# Springboot Project Management Application
 
-## Release 2.0
+## Backend Framework
+
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- JUnit
+
+## Frontend
+
+- HTML, CSS, JS
+- Spring Boot - Thymeleaf
+
+## Database
+
+- H2 Database
+- MySQL
+
+## Release 2.0 
 
 - Assign Project to employees and vice versa
 - Display All projects and employee on Home page
