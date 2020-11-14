@@ -9,13 +9,17 @@
 <div class="container">
 
     <form action="/employees/save" th:object="${employee}" method="POST">
-        <input type="text" placeholder="First Name" th:field ="${employee.firstName}">
+        <div class="container row mb-2">
+            <input type="text" placeholder="First Name" th:field ="${employee.firstName}"></div>
 
-        <input type="text" placeholder="Last Name" th:field ="${employee.lastName}">
+        <div class="container row mb-2">
+            <input type="text" placeholder="Last Name" th:field ="${employee.lastName}"></div>
 
-        <input type="email" placeholder="Email" th:field ="${employee.email}">
+        <div class="container row mb-2">
+            <input type="email" placeholder="Email" th:field ="${employee.email}"></div>
 
-        <button class="btn btn-info col-2" type="submit">Create Project</button>
+        <div class="container row mb-2">
+            <button class="btn btn-info col-2" type="submit">Create Project</button></div>
     </form>
 
 

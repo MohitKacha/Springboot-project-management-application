@@ -8,17 +8,26 @@
     <div class="container">
 
         <form action="/projects/save" th:object="${project}" method="POST">
-            <input type="text" placeholder="Project Name" th:field ="${project.name}">
+            <div class="container row mb-2">
+            <input type="text" placeholder="Project Name" th:field ="${project.name}"></div>
 
+            <div class="container row mb-2">
             <select th:field="${project.stage}">
                 <option th:value="NOTSTARTED"> Not Started</option>
                 <option th:value="INPROGRESS"> In Progress</option>
                 <option th:value="COMPLETED"> Completed</option>
             </select>
+            </div>
 
+            <div class="container row mb-2">
             <textarea type="text" th:field="${project.description}"
-                      placeholder="Enter Project Description"></textarea>
-
+                      placeholder="Enter Project Description"></textarea></div>
+            <div class="container row mb-2">
+            <select th:field="*{employees}" multiple="multiple">
+                <option th:each="employee : ${allEmployee}"
+                        th:value="${employee.id}"
+                        th:text="${employee.firstName}"></option>
+            </select></div>
             <button class="btn btn-info col-2" type="submit">Create Project</button>
         </form>
 
